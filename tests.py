@@ -1,17 +1,7 @@
-from functions.get_files_info_file import get_files_info
+from functions.write_file import write_file
 
-print(get_files_info("calculator", "."))
+print(write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum"))
 
-print("*****************")
+print(write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"))
 
-print(get_files_info("calculator", "pkg"))
-
-print("*****************")
-
-print(get_files_info("calculator", "/bin"))
-
-print("*****************")
-
-print(get_files_info("calculator", "../"))
-
-print("*****************")
+print(write_file("calculator", "/tmp/temp.txt", "this should not be allowed"))
